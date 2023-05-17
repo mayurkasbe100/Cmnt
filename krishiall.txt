@@ -1,0 +1,120 @@
+The Krushi Kendra portal can involve multiple business entities that contribute to its operation and provide various services. Here are some potential business entities for the Krushi Kendra portal:
+
+1. Portal Owner/Operator:
+   - This entity is responsible for developing, maintaining, and operating the Krushi Kendra portal.
+   - They oversee the overall management, including technical infrastructure, user support, and strategic direction.
+   - They may be a government agency, agricultural organization, or private company.
+
+2. Farmers:
+   - Farmers are the primary users of the Krushi Kendra portal.
+   - They utilize the platform to access information, seek advice, connect with experts, and participate in the marketplace.
+   - Farmers can create profiles, engage in discussions, and utilize the portal's features to enhance their farming practices.
+
+3. Agricultural Experts:
+   - Agricultural experts, such as agronomists, horticulturists, veterinarians, and researchers, play a crucial role in the portal.
+   - They provide advisory services, guidance, and expert knowledge to farmers.
+   - Experts can create profiles, offer consultations, contribute articles, and engage with farmers through various communication channels.
+
+4. Vendors and Suppliers:
+   - Vendors and suppliers are entities that offer agricultural products, services, and resources through the portal's marketplace.
+   - They can include seed suppliers, fertilizer companies, equipment manufacturers, livestock sellers, and other relevant businesses.
+   - Vendors can create listings, manage their inventory, and interact with farmers for sales and transactions.
+
+5. Government Agencies:
+   - Government agencies at the national, state, or local level can be involved in the Krushi Kendra portal.
+   - They provide information about government schemes, subsidies, policies, and regulations related to agriculture.
+   - Government agencies may collaborate with the portal owner to disseminate official information and facilitate program enrollment.
+
+6. Financial Institutions:
+   - Financial institutions, such as banks or microfinance organizations, can collaborate with the portal to offer financial services to farmers.
+   - They may provide loans, insurance products, or other financial assistance tailored to the needs of the agricultural sector.
+   - Financial institutions can integrate their services with the portal to streamline access for farmers.
+
+7. Research Institutions:
+   - Research institutions, agricultural universities, or research organizations can contribute to the portal by sharing research findings, studies, and scientific knowledge.
+   - They can collaborate with the portal owner to develop training modules, educational resources, and best practices based on their research.
+
+8. Advertisers and Sponsors:
+   - Advertisers and sponsors from the agriculture industry or related sectors may support the portal by funding its operations or sponsoring specific sections.
+   - They can promote their products, services, or brands through targeted advertising on the portal, generating revenue for the platform.
+
+These business entities work together to create a comprehensive ecosystem within the Krushi Kendra portal, connecting farmers, experts, vendors, government agencies, financial institutions, research institutions, and other stakeholders involved in the agricultural sector.
+
+
+
+
+Entities:-
+
+Fertilizer:-
+fertilizer_id
+fname
+frate
+quantity
+
+Loan:-
+bank address
+loan type
+loan id
+loan amount
+
+Agricultural expert adviser:-
+address
+contact details
+expert id
+
+Seed:-
+seed name
+category
+rate'
+seed id
+type
+
+Crop:-
+quantity
+crop name
+crop_id
+
+
+
+
+mysql
+-- Fertilizer table
+CREATE TABLE Fertilizer (
+  fertilizer_id INT PRIMARY KEY,
+  fname VARCHAR(100),
+  frate DECIMAL(10, 2),
+  quantity INT
+);
+
+-- Loan table
+CREATE TABLE Loan (
+  loan_id INT PRIMARY KEY,
+  bank_address VARCHAR(200),
+  loan_type VARCHAR(100),
+  loan_amount DECIMAL(10, 2)
+);
+
+-- Agricultural Expert table
+CREATE TABLE Agricultural_Expert (
+  expert_id INT PRIMARY KEY,
+  address VARCHAR(200),
+  contact_details VARCHAR(100)
+);
+
+-- Seed table
+CREATE TABLE Seed (
+  seed_id INT PRIMARY KEY,
+  seed_name VARCHAR(100),
+  category VARCHAR(100),
+  rate DECIMAL(10, 2),
+  type VARCHAR(100)
+);
+
+-- Crop table
+CREATE TABLE Crop (
+  crop_id INT PRIMARY KEY,
+  crop_name VARCHAR(100),
+  quantity INT
+);
+
+

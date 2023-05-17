@@ -1,0 +1,98 @@
+Functional Requirements
+1)Job Posting
+The system should allow HR personnel to create and post job vacancies with details such as job title, description, responsibilities, qualifications, and application deadlines.
+
+2)Candidate Application Management
+Candidates should be able to browse and search for job postings within the system.
+
+3)Candidate Evaluation and Selection
+HR personnel should have the ability to evaluate and rate candidates based on predefined criteria and assessments.
+
+4)Interview Scheduling and Management
+The system should provide a scheduling interface for HR personnel and hiring managers to arrange and manage interviews with selected candidates.
+
+5)Reporting and Analytics
+The system should generate reports and analytics related to the recruitment process, including metrics such as the number of job postings, applications received, candidate evaluation results, and time-to-hire.
+
+6)Integration with HR Systems
+The system should integrate with existing HR systems, such as the employee database and payroll system, to retrieve relevant employee information and facilitate seamless onboarding processes for selected candidates.
+
+7)User Roles and Permissions
+The system should support different user roles such as HR personnel, hiring managers, and administrators.
+
+8)Security and Data Privacy
+The system should adhere to data privacy and security regulations, ensuring that candidate information is stored and handled securely.
+
+
+-------------------------------------------------------------------------------------
+
+Business Entites
+
+Job Listing
+Location
+Position
+Job Profile ID
+Job Descripition
+
+Job Provider
+Job Listings no.
+Company name
+JP Id
+Login Key
+Applicants Hired
+
+Job Seeker
+Login Key
+Phone no
+UserName
+Email Id
+Resume
+
+Admin 
+Admin Id
+Login Key
+
+Job Applicants
+JS_id
+Job_id
+
+-----------------------------------------------------------------------
+
+-- Job Listing table
+CREATE TABLE Job_Listing (
+  Job_Profile_ID INT PRIMARY KEY AUTO_INCREMENT,
+  Location VARCHAR(255),
+  Position VARCHAR(255),
+  Job_Description TEXT
+);
+
+-- Job Provider table
+CREATE TABLE Job_Provider (
+  JP_Id INT PRIMARY KEY AUTO_INCREMENT,
+  Job_Listings_No INT,
+  Company_Name VARCHAR(255),
+  Login_Key VARCHAR(255),
+  Applicants_Hired INT
+);
+
+-- Job Seeker table
+CREATE TABLE Job_Seeker (
+  Login_Key VARCHAR(255) PRIMARY KEY,
+  Phone_No VARCHAR(255),
+  UserName VARCHAR(255),
+  Email_Id VARCHAR(255),
+  Resume TEXT
+);
+
+-- Admin table
+CREATE TABLE Admin (
+  Admin_Id INT PRIMARY KEY AUTO_INCREMENT,
+  Login_Key VARCHAR(255)
+);
+
+-- Job Applicants table
+CREATE TABLE Job_Applicants (
+  JS_Id INT,
+  Job_Id INT
+);
+

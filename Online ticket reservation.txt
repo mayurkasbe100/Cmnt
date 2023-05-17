@@ -1,0 +1,74 @@
+Functional Requirements
+2.1 User Registration and Authentication
+
+Users should be able to create accounts and log in securely.
+The system should authenticate users and provide appropriate access based on user roles (customer, administrator).
+2.2 Event Management
+
+Administrators should be able to add, edit, and delete event details such as event name, date, time, location, and ticket availability.
+Events should be categorized and searchable by type, date, and location.
+2.3 Seat or Ticket Selection
+
+Customers should be able to view available seats or tickets for a selected event and reserve them.
+The system should prevent double booking of seats or tickets and ensure availability is updated in real-time.
+Customers should be able to select seats or tickets based on their preferences (e.g., by location, price).
+2.4 Online Payment
+
+The system should integrate with a secure payment gateway to process online payments.
+Customers should be able to make payments using various payment methods (credit card, online wallets, etc.).
+Payment confirmation should be provided to the customer and the system.
+2.5 Reservation Management
+
+Administrators should be able to view, modify, and cancel reservations.
+Customers should be able to view their reservation history and make changes if allowed.
+2.6 Notification System
+
+The system should send reservation confirmation, ticket details, and any updates or changes to customers via email or SMS.
+Administrators should receive notifications for new reservations and cancellations.
+
+Business entity
+Ticket
+Number
+Amount 
+date
+
+Passenger
+Name 
+Age
+id
+
+Bus
+Number 
+seat 
+Time
+
+
+
+
+Sql command
+CREATE TABLE Ticket (
+    TicketID INT AUTO_INCREMENT,
+    Number INT,
+    Amount DECIMAL(10, 2),
+    Date DATE,
+    PRIMARY KEY (TicketID)
+);
+
+
+CREATE TABLE Passenger (
+    PassengerID INT AUTO_INCREMENT,
+    Name VARCHAR(50),
+    Age INT,
+    ID VARCHAR(20),
+    PRIMARY KEY (PassengerID)
+);
+
+
+CREATE TABLE Bus (
+    BusID INT AUTO_INCREMENT,
+    Number VARCHAR(20),
+    Seat INT,
+    Time TIME,
+    PRIMARY KEY (BusID)
+);
+
