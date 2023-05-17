@@ -1,0 +1,42 @@
+git clone https://github.com/Siddhesh8888/project1.git
+copy file in local folder(eg.webapp)
+open cmd
+git status
+git add .
+git status
+git commit -m "project1"
+git push
+
+
+aws
+create new instance
+	a)name
+	b)select ubuntu
+	c)create new key pair, select .ppk
+	d)security edit 
+		add bound rule -------> type: all trafic
+		source:anywhere
+	e)click on create instance
+===============================
+open putty
+copy public ip address from instance paste it in putty
+go into data ---------> ubuntu
+connection--->ssh----> auth---->credentials--->browse key(which is downloaded during instance creation(.ppk))
+
+=================================================
+sudo apt install
+sudo apt update
+sudo apt install docker.io
+sudo docker pull nginx
+sudo docker images
+sudo docker run --name nginxsvr -d -p 8080:8080 nginx:latest
+sudo docker ps
+
+git clone https://github.com/Siddhesh8888/project1.git
+ls
+go into local folder(appear after doing ls command) by using cd (eg. cd webapp/)
+sudo docker build -t iacsd .
+sudo docker run -d -p 8081:7667 iacsd 
+sudo docker ps
+
+go into chrome paste your public ip and port no.(eg.6:12:13:45:8081)
